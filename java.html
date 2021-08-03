@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java practise</title>
+    <style>
+        table,th,td{
+            border: 1px solid rgb(49, 221, 92);
+        }
+        th,td{
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    Name: <input type="text" id="name"><br><br>
+    City: <input type="text" id="city"><br><br>
+    Grade: <input type="text" id="grade">
+            <br>
+            <button type="submit" onclick="details()">submit</button>
+            <br>
+            <br>
+            <table id="display">
+                <thead>
+
+                    <tr>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            
+    <script>
+        
+        let row=1;
+
+        function details() {
+         let name = document.getElementById('name').value;
+         let city = document.getElementById('city').value;
+         let grade = document.getElementById('grade').value;
+         let display = document.getElementById('display')
+         let add = display.insertRow(row);
+         let cell_1 = add.insertCell(0) 
+         let cell_2 = add.insertCell(1) 
+         let cell_3 = add.insertCell(2) 
+         cell_1.innerHTML  = name;
+         cell_2.innerHTML  = city;
+         cell_3.innerHTML  = grade;
+        }
+        // console.log(details())
+
+    </script>
+</body>
+
+</html>

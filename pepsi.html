@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.pepsi.com</title>
+    <link rel="stylesheet" href="CSS/pepsicss.css">
+</head>
+
+<body>
+    <header id="header">
+        <div id="menusection">
+            <div class="left">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="right">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">what's new</a></li>
+                        <li><a href="#">newsletter</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+            </div>
+        </div>
+        <section>
+            <div class="text">
+            <p id="para1">That's What <br>
+       <span id="half">I Like</span> </p>
+            <p id="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla eius veritatis autem. <br> Esse eos blanditiis iste nostrum laboriosam dolor sapiente aspernatur maiores assumenda.</p>
+            <a href="#" id="btn">View all Products</a>
+            </div>
+            <div class="right">
+                <img src="images/pepsi001.png" alt="pepsi1" class="mainimg">
+            </div>
+            <div class="small_icon" >
+               <img src="images/pepsi001.png" alt="pepsi1" id="img1" onclick="changeimg('images/pepsi001.png');changecolor('brown');link('pink')">
+               <img src="images/pepsi002.png" alt="pepsi2" id="img2" onclick="changeimg('images/pepsi002.png');changecolor('green');link('cyan')">
+               <img src="images/pepsi003.png" alt="pepsi3" id="img3" onclick="changeimg('images/pepsi003.png');changecolor('red');link('green')">
+            </div>
+            <div id="media">
+                <img src="images/twitter.png" alt="twitter-logo">
+                <img src="images/facebook.png" alt="facebook-logo">
+                <img src="images/instagram.png" alt="instagram-logo">
+            </div>
+        </section>
+        
+    </header>
+    <script>
+        function changeimg(element) {
+            let image = document.querySelector('.mainimg').src = element;
+        }
+        function link(element) {
+            let id = document.querySelector('#btn');
+            id.style.background= element;
+        }
+        function changecolor(color) {
+            let colors = document.querySelector('#header');
+            colors.style.background = color;
+            // console.log(image)
+        }
+    </script>
+</body>
+
+</html>

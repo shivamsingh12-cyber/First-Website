@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript practicle</title>
+    <style>
+        div {
+            border: 2px solid green;
+            padding-left: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>CGPA Calculator</h1>
+
+        <input type="text" name="text" id="tex" placeholder="Englisgh">
+        <br>
+
+        <input type="text" name="area" id="calc" placeholder="Hindi">
+        <br>
+
+        <input type="text" name="tim" id="lot" placeholder="Maths">
+        <br>
+
+        <input type="text" name="can" id="mat" placeholder="Computer">
+        <br>
+        <input type="submit" value="submit" onclick="calcy()">
+
+        <div id="gang"></div>
+
+    </div>
+
+
+
+</body>
+<script>
+    const calcy = () => {
+        let tex = document.getElementById(`tex`).value
+        let calc = document.getElementById(`calc`).value
+        let lot = document.getElementById(`lot`).value
+        let mat = document.getElementById(`mat`).value
+        let yourgrades = "";
+
+        let grade = parseFloat(tex) + parseFloat(calc) + parseFloat(lot) + parseFloat(mat)
+
+        let perc = (grade/400*100)
+        
+
+        if (perc > 90) {
+            yourgrades = `A`
+        }
+        else if (perc >60) {
+            yourgrades = `B`
+        }
+        else if (perc >50) {
+            yourgrades = `C`
+        }
+        else if (perc <50) {
+            yourgrades = `C`
+         }
+        // else if(perc < 40)  {
+        //     yourgrades = `F`
+        // }
+
+        if (perc > 40) {
+            document.getElementById(`gang`).innerText = `your marks total out of 400 is ${grade} and your percentage is ${perc}% and your grade is  ${yourgrades}. You are pass  `
+        }
+
+         else{
+            document.getElementById(`gang`).innerText = `your marks total out of 400 is ${grade} and your percentage is ${perc}% and your grade is ${yourgrades} . You are fail`
+        }
+    }
+</script>
+
+</html>

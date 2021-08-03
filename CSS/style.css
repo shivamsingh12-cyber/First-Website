@@ -1,0 +1,185 @@
+/* universal selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+    top: 0px;;
+}
+
+/* navigation bar section */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    opacity: 0.79;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+/* navigation bar: list items */
+#navbar ul{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+#navbar ul li{
+   list-style: none;
+   font-size: 24px;
+}
+#navbar ul li a{
+    display: block;
+  color:white ;
+  padding: 0px 22px;
+  text-decoration: none;
+}
+#navbar ul li a:hover{
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+ 
+}
+/* navigation bar:logos section */
+#navbar #logo{
+    margin: 0px;
+}
+
+#navbar img{
+    height: 83px;
+   
+}
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    
+}
+#home::before{
+    content: "";
+    background: url(../images/bg1.jpg) no-repeat center center/cover;
+    opacity: 0.84;
+    position: absolute;
+    height: 496px;
+    width: 100%;
+    z-index: -1;
+    top: 0px;
+}
+
+.primary-h{
+    text-transform: capitalize;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    text-shadow: 3px 2px 0px #FFC107;;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#home  p{
+    font-size: 1.1rem;
+    margin: 2px 0px;
+}
+
+#btnone{
+    font-size: 1.2rem;
+    margin: 24px 0px;
+    padding: 8px 7px;
+    border-radius: 31px;
+    cursor: pointer;
+    background-color: lightsalmon;
+}
+/* service section */
+#service-container{
+    padding: 41px 0px;
+}
+
+#service-container .heading{
+    text-transform: capitalize;
+    width: 263px;
+    margin: auto;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#service{
+    display: flex;
+    margin: 10px;
+}
+
+
+#service .box{
+    border: 2px solid;
+    margin: 12px 40px;
+    text-align: center;
+    border-radius: 39px;
+    box-shadow: 2px 3px 0px green;
+}
+#service .box img{
+    display: block;
+    width: 209px;
+    margin: auto;
+}
+
+h2{
+    text-transform: capitalize;
+}
+/* our clients section */
+#clients{
+    display: flex;
+    justify-content: center;
+}
+
+#clients .third-h{
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    height: 46px;
+    position: absolute;
+}
+#clients img{
+        height: 337px;
+        position: relative;
+        top: 16px;
+}
+
+#clients::before{
+  content: "";
+  background: url(../images/bg2.jpg) no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 348px;
+  z-index: -1;
+  opacity: 0.59;
+}
+/* contact-us section */
+
+#contact-form{
+  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0px;
+}
+#contact-form::before{
+    content: "";
+    background: url(../images/bg2.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 373px;
+    z-index: -1;
+    opacity: 0.49;
+    
+}

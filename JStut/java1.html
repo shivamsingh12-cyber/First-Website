@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cgpa Calcy</title>
+    <style>
+        div {
+            border: 2px solid green;
+            padding-left: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CGPA Calculator</h1>
+        <label for="tex">English </label>
+
+        <input type="text" name="text" id="tex" >
+        <br>
+        <label for="calc">Maths </label>
+        <input type="text" name="area" id="calc">
+        <br>
+        <label for="lot">Hindi </label>
+        <input type="text" name="tim" id="lot">
+        <br>
+        <label for="mat">Social-Science </label>
+        <input type="text" name="can" id="mat">
+        <br>
+        <label for="san">Sanskrit </label>
+        <input type="text" name="can" id="san">
+        <br>
+        <input type="submit" value="submit" id="btn1">
+
+        <div id="info"></div>
+
+    </div>
+    <script>
+        let btn = document.getElementById(`btn1`).addEventListener(`click`,() =>{
+            let text = document.getElementById(`tex`).value
+            let area = document.getElementById(`calc`).value
+            let tim = document.getElementById(`lot`).value
+            let can = document.getElementById(`mat`).value
+            let san = document.getElementById(`san`).value
+            yourgrade = '';
+            
+            
+            let totalgrades =  parseFloat(text) + parseFloat(area) + parseFloat(tim) + parseFloat(can) + parseFloat(san)
+
+            let percentage = (totalgrades/100*100)
+
+            if (percentage>80) {
+                yourgrade = 'A'
+            }
+            else if(percentage>60){
+                    yourgrade = 'B'
+            }
+            else if(percentage>40){
+                    yourgrade = 'C'
+            }
+            else{
+                yourgrade = 'D'
+            }
+
+            if (percentage>40) {
+                document.getElementById(`info`).innerHTML=`The total number out of 100 is ${totalgrades} and your percentage is ${percentage}% and your grade is ${yourgrade}.It means you are pass`
+            }
+            else{
+                document.getElementById(`info`).innerText=`The total number out of 100 is ${totalgrades} and your percentage is ${percentage}% and your grade is ${yourgrade}.It means you are fail`
+            }
+          
+        })
+    </script>
+</body>
+</html>
+

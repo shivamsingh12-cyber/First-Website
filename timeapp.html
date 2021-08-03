@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            border: 2px ridge red;
+            height: 10rem;
+            padding-left: 309px;
+            padding-top: 60px;
+            background: cadetblue;
+            color: aquamarine;
+            font-weight: lighter;
+            font-family:cursive;
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>Current time is</u> <span id="time"></span></h1>
+</body>
+<script>
+    let set;
+    let dateshow;
+    let time;
+   
+     let timeshow = document.getElementById(`time`).innerHTML= new Date()
+     const options = {weekday:'long', year:'numeric', month:'long', day:'numeric'}
+    setInterval(() => {
+        set = new Date()
+        dateshow = set.toLocaleDateString(undefined,options)
+        console.log(dateshow)
+        time = set.getHours() + ':' + set.getMinutes() + ':' + set.getSeconds();
+        let  timeshow = document.getElementById(`time`).innerHTML= time + ' on ' + dateshow;
+    }, 1000);
+</script>
+
+</html>
