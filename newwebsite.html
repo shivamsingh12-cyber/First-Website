@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations and transitions</title>
+    <style>
+        .apple{
+            background-color: lightgreen;
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            height: 250px;
+            width: 250px;
+            background-color: maroon;
+            margin: 0;
+            padding: 0;
+            transition-property: all;
+            transition-duration: 0.9s;
+            transition-timing-function: ease-in-out;
+            text-align: center;
+            line-height: 219px;
+        }
+        h3:hover{
+            background-color: pink;
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            font-size: 48px;
+            transition-duration: 0.1s;
+        }
+        button{
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.1s;
+        }
+        button:hover{
+            background-color: pink;
+            border-radius: 10px;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="apple">
+        <h3>where are you</h3>
+        <button>clear now</button>
+    </div>
+</body>
+</html>
